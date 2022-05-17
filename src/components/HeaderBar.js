@@ -1,27 +1,36 @@
 import React from 'react'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import Logo from '../assets/Logo-TRANS.png'
+import './Components.css';
 
 function HeaderBar() {
   return (
     <>
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div className="container">
-                <a className="navbar-brand text-secondary" href="#page-top">Soggy Doggy Mobile</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <Navbar className="navbar-expand-lg bg-secondary" id="mainNav">
+            <Container>
+                <Navbar.Brand className="text-secondary" href="./"><img src={Logo} /></Navbar.Brand>
+                <Navbar.Toggle className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i className="fas fa-bars ms-1"></i>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li className="nav-item"><a className="nav-link text-secondary" href="/services">Carpet Cleaning</a></li>
-                        <li className="nav-item"><a className="nav-link text-secondary" href="/coupons">Coupons</a></li>
-                        <li className="nav-item"><a className="nav-link text-secondary" href="/services/other">Other Services</a></li>
-                        <li className="nav-item"><a className="nav-link text-secondary" href="/FAQs">FAQs</a></li>
-                        <li className="nav-item"><a className="nav-link text-secondary" href="https://booking.moego.pet/go/?name=SoggyDoggy" target="_blank" rel='noreferrer'>Book Online</a></li>
-                        <li className="nav-item"><a className="nav-link text-secondary" href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                </Navbar.Toggle>
+                <Navbar.Collapse id="navbarResponsive">
+                    <Nav className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <NavDropdown className='bg-secondary' title="Carpet Cleaning">
+                            <NavDropdown.Item href='/services/steam-cleaning'>Steam Carpet Cleaning</NavDropdown.Item>
+                            <NavDropdown.Item href='/services/tile-grout'>Tile & Grout Cleaning</NavDropdown.Item>
+                            <NavDropdown.Item href='/services/upholstery'>Upholstery Cleaning</NavDropdown.Item>
+                            <NavDropdown.Item href='/services/area-rug'>Area Rug Cleaning</NavDropdown.Item>
+                            <NavDropdown.Item href='/services/pet-stain-odor'>Pet Stain & Odor Removal</NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link href="/coupons">Coupons</Nav.Link>
+                        <Nav.Link href="/services/other">Other Services</Nav.Link>
+                        <Nav.Link href="/FAQs">FAQs</Nav.Link>
+                        <Nav.Link href="https://booking.moego.pet/go/?name=SoggyDoggy" target="_blank" rel='noreferrer'>Book Online</Nav.Link>
+                        <Nav.Link href="/contact">Contact Us</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     </>
   )
 }

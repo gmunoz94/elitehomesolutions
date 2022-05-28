@@ -74,7 +74,7 @@ const warningColor = [
   "#ffb74d"
 ];
 const dangerColor = [
-  "#f44336",
+  "#930909",
   "#ef5350",
   "#e53935",
   "#f55a4e",

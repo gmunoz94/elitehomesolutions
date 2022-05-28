@@ -6,8 +6,6 @@ import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -16,18 +14,13 @@ import Parallax from "components/Parallax/Parallax.js";
 import Footer from "components/Footer/Footer.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
-import SectionOffice from "views/AboutUsPage/Sections/SectionOffice.js";
 
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
-import CarpetCleaningDescription from "./Sections/Description/CarpetCleaningDescription";
-import ProductContact from "./Sections/Contact/ProductContact";
-import CarpetCleaningGallery from "./Sections/Gallery/CarpetCleaningGallery";
-import Filler from "./Sections/Contact/Filler";
+import Filler from "views/ProductPages/Sections/Contact/Filler";
 
 const useStyles = makeStyles(aboutUsStyle);
 
-export default function CarpetCleaning() {
+export default function FAQPage() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -45,7 +38,7 @@ export default function CarpetCleaning() {
           color: "danger"
         }}
       />
-      <Parallax image={require("assets/img/sections/mainPage/carpetCleaning.jpg")} filter="dark" small>
+      <Parallax image={require("assets/img/sections/mainPage/areaRug.jpg")} filter="dark" small>
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem
@@ -57,19 +50,12 @@ export default function CarpetCleaning() {
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title}>Steam Carpet Cleaning</h1>
+              <h1 className={classes.title}>This Page Under Construction</h1>
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          <CarpetCleaningDescription />
-          <Filler />
-          <CarpetCleaningGallery />
-          <ProductContact />
-        </div>
-      </div>
+      <Filler />
       <Footer
         content={
           <div>

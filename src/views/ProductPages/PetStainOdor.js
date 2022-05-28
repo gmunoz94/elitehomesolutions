@@ -39,7 +39,7 @@ export default function PetStainOdor() {
         color="transparent"
         changeColorOnScroll={{
           height: 300,
-          color: "info"
+          color: "danger"
         }}
       />
       <Parallax image={require("assets/img/sections/mainPage/petStain.jpg")} filter="dark" small>

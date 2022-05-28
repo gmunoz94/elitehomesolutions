@@ -115,7 +115,7 @@ const headerStyle = theme => ({
       ", 0.46)"
   },
   danger: {
-    backgroundColor: dangerColor[0],
+    backgroundColor: "#930909",
     color: whiteColor,
     boxShadow:
       "0 4px 20px 0px rgba(" +

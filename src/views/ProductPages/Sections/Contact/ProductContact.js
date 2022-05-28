@@ -44,7 +44,7 @@ export default function ProductContact() {
               >
                 <Button 
                   href="http://www.google.com/" 
-                  color="primary" 
+                  color="danger" 
                   target="_blank"
                   round
                 >
